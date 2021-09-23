@@ -1,0 +1,29 @@
+{
+    "data":[
+        {
+            "question":"What is React JS?",
+            "choices":["Server side Framework","User-interface framework","Library for building interfaces","none of the above"],
+            "answer":"Library for building interfaces"
+        },
+        {
+            "question":"React is mainly used for building ___.",
+            "choices":["Database","Connectivity","User Interface","Design Platform"],
+            "answer":"User Interface"
+        },
+        {
+            "question":"The lifecycle methods are mainly used for ___",
+            "choices":["Keeping track of event history","enhancing components","freeing up resources","none of the above"],
+            "answer":"Keeping track of event history"
+        },
+        {
+            "question":"What is used to pass data to a component from outside?",
+            "choices":["setState","render with arguments","PropTypes","props"],
+            "answer":"props"
+        },
+        {
+            "question":"The arbitrary inputs of components are called ___",
+            "choices":["Keys","Props","Elements","Ref"],
+            "answer":"Props"
+        }
+    ]
+}

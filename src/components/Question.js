@@ -2,12 +2,6 @@ import React, { useRef, useState ,useEffect } from 'react'
 import './Question.css'
 import Progress from './Progress';
 import Loading from './Loading'
-
-const testData = [
-    { bgcolor: "#6a1b9a", completed: 60 },
-    { bgcolor: "#00695c", completed: 30 },
-    { bgcolor: "#ef6c00", completed: 53 },
-  ];
   
 const Question = ({ data, onAnswerUpdate, numberOfQuestion, activeQuestion, onSetActiveQuestion, onSetStep}) => {
     const [selected,setSelected] = useState("");
@@ -61,22 +55,21 @@ const Question = ({ data, onAnswerUpdate, numberOfQuestion, activeQuestion, onSe
                 }
 
         }, [data]);
-
     return (
-        <>
+       <>
         { loading ? <Loading/> : 
                     <div className="question">
                     <Progress bgcolor={"#776DA2"} completed={completed} />
                 <div className="question-container container">
                     <div className="question-title">{data.question}</div>
                     <div className="main" ref={radiosWrapper}>
-                    {data.choices.map((choice,i) => (
-                        <div className="answer-container" key={i}>
-                            <label className="radio has-background-light" >
-                                <input type="radio" name="answer" value={choice} onChange={changeHandler} />
-                                <span>{choice}</span>
-                            </label>
-                        </div>
+                        {data.choices.map((item,i) => (
+                            <div className="answer-container" key={i}>
+                                <label className="radio has-background-light" >
+                                    <input type="radio" name="answer" value={item} onChange={changeHandler} />
+                                    <span>{item}</span>
+                                </label>
+                            </div>
                     ))}
                     </div>
                     {error && <div className="error-container">{error}</div>}
